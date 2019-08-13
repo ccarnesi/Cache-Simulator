@@ -1,0 +1,10 @@
+DATA STRUCTURE:
+
+In this project I decided to use a hashtable in with linked list chaining as my data structure. This worked well becuse depending on the input the
+the set size would change. Also this made implementing LRU easy for me because whenever I hit in the cache or inserted a new thing in the
+cache I inserted it to the front of the list. This made the lines of the set always in the right order from most recent to least recent.
+
+OBSERVATION:
+I noticed when implementing prefetching in the cache the hit rate would go up but so would the memory reads as well. This is due to locality and the fact that when you use
+something in memory it is likely that you will also use something that is close to it. One great example of this is arrays. Memory reads went up because when you prefetch 
+there is also a chance that the prefetched value won't get used.
